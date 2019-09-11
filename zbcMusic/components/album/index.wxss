@@ -1,0 +1,52 @@
+.container {
+    margin-top: 30rpx;
+    display: flex;
+    position: relative;
+    box-shadow: 2px 2px 3px #e3e3e3;
+    flex-direction: column;
+    width: 300rpx;
+    height: 400rpx;
+}
+
+.container image {
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 2px;
+}
+
+.description {
+    width: 276rpx;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10rpx 15rpx 8rpx 15rpx;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.sname {
+    margin-top: 10rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.singer {
+    font-size: 20rpx;
+    color: #999999;
+    margin-bottom: 10rpx;
+}
+
+.foot {
+    font-size: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.foot .atime {
+    color: #666666;
+}

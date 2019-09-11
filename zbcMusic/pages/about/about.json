@@ -1,0 +1,6 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "v-mask": "/components/mask/index"
+  }
+}

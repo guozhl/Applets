@@ -1,0 +1,12 @@
+<wxs src="../../util/filter.wxs" module="util" />
+<view catch:tap="onTap" class="container">
+  <view class="head">
+    <view class="tag">周笔畅</view>
+    <view class="like">
+      <image src="../images/player@play.png"></image>
+      <text> {{util.toNumber(classic.listenCount)}}</text>
+    </view>
+  </view>
+  <image class="music-img" src="{{classic.pic}}"></image>
+  <view class="text">{{classic.title}}</view>
+</view>

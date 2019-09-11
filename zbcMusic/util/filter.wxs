@@ -1,0 +1,74 @@
+// 流派
+var genre = function(id) {
+  var genreArr = ['流行', 'Pop 流行', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Soundtrack']
+  return genreArr[id]
+}
+
+// 语言
+var language = function(id) {
+  var languageArr = ['国语', '', '', '', '', '英语']
+  return languageArr[id]
+}
+
+// 截取n条
+var limit = function(array, length) {
+  return array.slice(0, length)
+}
+
+// 时间戳转时间-年月日时分
+var formatTime = function(time) {
+  time = Number(time + '000')
+  var date = getDate(time)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minutes = date.getMinutes()
+  if (month < 10) {
+    month = '0' + month
+  }
+  if (day < 10) {
+    day = '0' + day
+  }
+  if (hour < 10) {
+    hour = '0' + hour
+  }
+  if (minutes < 10) {
+    minutes = '0' + minutes
+  }
+
+  return year + '年' + month + '月' + day + '日 ' + hour + ':' + minutes
+}
+
+// 转换歌曲时长
+var songTime = function(time) {
+  var minutes = (time / 60).toString().split('.')[0]
+  minutes = Number(minutes)
+  var seconds = time % 60
+  if (minutes < 10) {
+    minutes = '0' + minutes
+  }
+  if (seconds < 10) {
+    seconds = '0' + seconds
+  }
+  return minutes + ':' + seconds
+}
+
+var toNumber = function(num) {
+  var bnum = num
+  bnum = Number(bnum)
+  if (bnum > 10000) {
+    bnum = (bnum / 10000).toFixed(1) + '万'
+  } 
+  return bnum
+}
+
+
+module.exports = {
+  limit: limit,
+  genre: genre,
+  language: language,
+  formatTime: formatTime,
+  songTime: songTime,
+  toNumber: toNumber
+}

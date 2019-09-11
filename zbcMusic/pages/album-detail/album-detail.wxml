@@ -1,0 +1,75 @@
+<wxs src="../../util/filter.wxs" module="util" />
+<view class="container">
+  <view class="head">
+    <image src="{{imgUrl}}"></image>
+    <text class='title'>{{albumTitle}}</text>
+    <text class='author'>{{albumSinger}}</text>
+  </view>
+
+  <!-- 专辑信息 -->
+  <view class="sub-container">
+    <text class="headline">专辑信息</text>
+    <view class="detail-container">
+      <view class="vertical description">
+        <text>流派</text>
+        <text>语种</text>
+        <text>发行时间</text>
+      </view>
+      <view class="vertical">
+        <text>{{util.genre(songs[0].songInfo.genre)}}</text>
+        <text>{{util.language(songs[0].songInfo.language)}}</text>
+        <text>{{songs[0].songInfo.time_public}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 歌曲列表 -->
+  <view class="sub-container">
+    <text class="headline">歌曲列表</text>
+    <view class="song-container table-title">
+      <text></text>
+      <text>歌曲</text>
+      <text>歌手</text>
+      <text>时长</text>
+    </view>
+    <block wx:for="{{songs}}" wx:key="mid">
+      <view class="song-container table-body">
+        <text>{{item.songInfo.index_album}}</text>
+        <text>{{item.songInfo.title}}</text>
+        <text>{{item.songInfo.singer[0].name}}</text>
+        <text>{{util.songTime(item.songInfo.interval)}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 评论区 -->
+  <view class="sub-container">
+    <text class="headline">最新评论(10)</text>
+    <block wx:for="{{util.limit(comments, 10)}}" wx:key="commentid">
+      <view class="comment-content">
+        <image src="{{item.avatarurl}}"></image>
+        <view>
+          <text>{{item.nick}}</text>
+          <text>{{item.rootcommentcontent}}</text>
+          <text>{{util.formatTime(item.time)}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>
+
+<!-- 底部输入短评 -->
+<view class="post-container" hidden="{{posting}}">
+  <view class="post-fake" bind:tap="onFakePost">
+    <text>期待你的神评论...</text>
+  </view>
+</view>
+
+<!-- 输入评论浮出框 -->
+<view class="posting-container" wx:if="{{posting}}">
+  <input class="post" bindconfirm="onPost" maxlength="50" placeholder='短评最多50个字'></input>
+  <text class="cancel" bind:tap="onCancel">取消</text>
+</view>
+
+<v-mask wx:if="{{posting}}" />

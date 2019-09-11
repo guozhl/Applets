@@ -1,0 +1,11 @@
+<view class="about">
+  <view class="about-me">
+    <text>本小程序只作个人演示</text>
+    <text>不作商业用途，不承诺保留用户相关数据</text>
+    <text>如有疑问请联系：</text>
+    <text>微信：cclikeachild</text>
+    <text>邮箱：skye0515@126.com</text>
+  </view>
+</view>
+<v-mask/>
+<image class="zbc" src="/images/my/zbc.jpeg"></image>

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/classic/classic",
+    "pages/album/album",
+    "pages/album-detail/album-detail",
+    "pages/my/my",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "何时有你",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "default",
+    "backgroundColor": "#ffffff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/classic/classic",
+        "text": "音乐",
+        "iconPath": "/images/tab/book.png",
+        "selectedIconPath": "/images/tab/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/album/album",
+        "text": "专辑",
+        "iconPath": "/images/tab/classic.png",
+        "selectedIconPath": "/images/tab/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "MV",
+        "iconPath": "/images/tab/my.png",
+        "selectedIconPath": "/images/tab/my@highlight.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "globalData": {
+    "email": "skye0515@163.com",  
+    "AppID": "wx7ae4cdf7455b3edd",
+    "AppSecret": "fcf09102143d95b29e6cec4289ac19bb"
+  }
+}

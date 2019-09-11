@@ -1,0 +1,29 @@
+<view class="container">
+  <!-- 头部搜索 -->
+  <view class="header">
+    <view class="search-content">
+      <view class="search-container" style="width:{{searchBoxW}}rpx;transform:{{scaleX}}">
+        <image class="icon" src="../../images/icon/search.png" />
+        <input 
+          class='bar' 
+          placeholder-class='in-bar' 
+          value="{{keyword}}" 
+          bind:focus="onFocus" 
+          bind:confirm="onConfirm" 
+          placeholder='搜索专辑' 
+          />
+        <image class="cancel-img" bind:tap="onDelete" src="../../images/icon/cancel.png" />
+      </view>
+      <view class='cancel' bind:tap="onCancel" hidden="{{!searching}}">取消</view>
+    </view>
+  </view>
+
+  <!-- 专辑列表 -->
+  <view class="sub-container">
+    <view class="books-container">
+      <block wx:key="albumID" wx:for="{{albums}}">
+        <v-album album="{{item}}" />
+      </block>
+    </view>
+  </view>
+</view>

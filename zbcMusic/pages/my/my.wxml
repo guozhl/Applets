@@ -1,0 +1,38 @@
+<view class="container">
+  <image class="bg" src="/images/my/my@bg.png"></image>
+
+  <!-- 没授权显示 -->
+  <v-button class="avatar-position" wx:if="{{!authorized}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+    <image slot="img" class="avatar" src="/images/my/my.png" />
+  </v-button>
+
+  <!-- 授权后显示 -->
+  <view class="avatar-container avatar-position" wx:if="{{authorized}}">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" />
+    <text>{{userInfo.nickName}}</text>
+  </view>
+
+  <!-- 关于我们 -->
+  <view class="about-container">
+    <view class="about-us" bind:tap="onJumpToAbout">
+      <image src="/images/my/about.png" />
+      <text class="description">关于我们</text>
+    </view>
+    <view class="about-us">
+      <text class="book-num">{{mvCount}}</text>
+      <text class="description">喜欢的MV</text>
+    </view>
+  </view>
+
+  <!-- MV列表 -->
+  <view class="like-container">
+    <view class="preview-container">
+      <block wx:for="{{mvArr}}" wx:key="">
+        <v-preview class="preview" bind:tapping="onJumpToDetail" classic="{{item}}" />
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 点击学习 -->
+<!-- <image class="study" bind:tap="onStudy" src="/images/my/study.png"></image> -->

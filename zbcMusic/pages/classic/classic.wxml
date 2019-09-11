@@ -1,0 +1,28 @@
+<wxs src="../../util/filter.wxs" module="util" />
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <s-epsoide class="epsoide" index="{{classicData.index}}"></s-epsoide>
+    <s-like class="like" bind:like="onLike" like="{{classicData.like_status}}" count="{{classicData.fav_nums}}"></s-like>
+  </view>
+
+  <!-- 音乐 -->
+  <s-music 
+    img="{{classicData.image}}" 
+    content="{{classicData.content}}" 
+    title="{{classicData.title}}" 
+    src="{{classicData.url}}"
+    >
+  </s-music>
+
+  <!-- 切换 -->
+  <s-navi 
+    class="navi" 
+    bind:left="onNext" 
+    bind:right="onPrevious" 
+    title="{{classicData.title}}" 
+    first="{{first}}" 
+    latest="{{latest}}"
+    >
+  </s-navi>
+</view>

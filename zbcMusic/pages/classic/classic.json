@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "s-like": "/components/like/index",
+    "s-music": "/components/classic/music/index",
+    "s-epsoide": "/components/epsoide/index",
+    "s-navi": "/components/navi/index"
+  }
+}

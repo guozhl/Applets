@@ -1,0 +1,10 @@
+<view bind:tap="onTap" class="container">
+    <image src="{{album.albumPic}}"></image>
+    <view class="description">
+        <text class='sname'>{{album.albumName}}</text>
+        <text class='singer'>{{album.singerName}}</text>
+        <view class='foot'>
+            <text class="atime">发行时间  {{album.publicTime}}</text>
+        </view>
+    </view>
+</view>

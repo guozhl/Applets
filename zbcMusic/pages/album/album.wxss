@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 头部 */
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid #f5f5f5;
+  box-shadow: 0 0 3px 0 #e3e3e3;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.header .search-content {
+  margin: 0 55rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 搜索 */
+
+.header .search-container {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #f5f5f5;
+}
+
+.header .search-container .icon {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.header .search-container .bar {
+  width: 90%;
+  height: 68rpx;
+  margin: 0 10rpx;
+  font-size: 28rpx;
+}
+
+.header .search-container .in-bar {
+  color: #999;
+}
+
+.header .search-container .cancel-img {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.header .cancel {
+  /* background: red; */
+  width: 100rpx;
+  height: 68rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+/* 专辑列表 */
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin-top: 100rpx;
+}
+
+.sub-container .books-container {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 55rpx 30rpx 55rpx;
+  box-sizing: border-box;
+}
