@@ -1,6 +1,4 @@
 const config = {
-  httpUrl: 'http://bl.7yue.pro/v1/',
-  appkey: '98HcsgdJ3mx4Ufcm',
   resCode: 0,
   songList: [{
       content: "共你许的愿 是有生之年",

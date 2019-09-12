@@ -46,18 +46,6 @@
 		"game": {
 			"currentL": -1,
 			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": 0,
-					"name": "pages/album-detail/album-detail",
-					"pathName": "pages/album-detail/album-detail",
-					"query": "aid=7043277&amid=001xUYaL2nggfC",
-					"scene": 1001
-				}
-			]
 		}
 	}
 }

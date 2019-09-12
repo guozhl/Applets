@@ -62,6 +62,11 @@ Component({
         })
         mMgr.pause()
       }
+      mMgr.onEnded(() => {
+        this.setData({
+          playing: false
+        })
+      })
     }
   }
 })
